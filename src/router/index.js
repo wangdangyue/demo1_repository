@@ -16,6 +16,8 @@ const Prodetail = () => import('@/views/prodetail')
 const Search = () => import('@/views/search')
 const SearchList = () => import('@/views/search/list.vue')
 
+const Address = () => import('@/views/address')
+const AddressEdit = () => import('@/views/address/addressEdit.vue')
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -37,7 +39,9 @@ const router = new VueRouter({
     // 动态路由传参，通过id查询商品
     { path: '/prodetail/:id', component: Prodetail },
     { path: '/search', component: Search },
-    { path: '/searchlist', component: SearchList }
+    { path: '/searchlist', component: SearchList },
+    { path: '/address', component: Address },
+    { path: '/addressedit', component: AddressEdit }
 
   ]
 })

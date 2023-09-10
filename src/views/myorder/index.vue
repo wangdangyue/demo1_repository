@@ -1,6 +1,5 @@
 <template>
-
-  <div  class="myorder">
+  <div class="myorder">
     <div class="header">
       <van-nav-bar title="我的订单" left-arrow @click-left="$router.go(-1)" />
     </div>
@@ -14,30 +13,40 @@
       </van-tabs>
     </div>
 
-    <div  v-if="total===0" class="null">
-    <img src="@/assets/empty.png" alt=""><br>
-    没有订单信息
-  </div>
-
-   <div v-else class="main">
-    <div  class="order_list">
-      <OrderListItem
-        v-for="item in orderList"
-        :key="item.order_id"
-        :item="item"
-      ></OrderListItem>
+    <div v-if="total === 0" class="null">
+      .null{
+width: 200px;
+margin: 150px auto 0px;
+padding-bottom: 300px;
+color: gray;
+// background-color: #fff;
+img{
+  width: 100%;
+  height: 100%;
+}
+}
+      没有订单信息
     </div>
 
-    <div class="footer">
-      <van-pagination
-        @change="onClick"
-        v-model="currentPage"
-        :page-count="last_page"
-        :total-items="total"
-        :items-per-page="per_page"
-      />
+    <div v-else class="main">
+      <div class="order_list">
+        <OrderListItem
+          v-for="item in orderList"
+          :key="item.order_id"
+          :item="item"
+        ></OrderListItem>
+      </div>
+
+      <div class="footer">
+        <van-pagination
+          @change="onClick"
+          v-model="currentPage"
+          :page-count="last_page"
+          :total-items="total"
+          :items-per-page="per_page"
+        />
+      </div>
     </div>
-   </div>
   </div>
 </template>
 
@@ -80,8 +89,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.myorder{
-  background: #FAFAFA;
+.myorder {
+  background: #fafafa;
 }
 .header {
   width: 100%;
@@ -98,15 +107,15 @@ export default {
 // .order_list{
 //   padding-bottom: 50px;
 // }
-.null{
-width: 200px;
-margin: 150px auto 0px;
-padding-bottom: 300px;
-color: gray;
-// background-color: #fff;
-img{
-  width: 100%;
-  height: 100%;
-}
+.null {
+  width: 200px;
+  margin: 150px auto 0px;
+  padding-bottom: 300px;
+  color: gray;
+  // background-color: #fff;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

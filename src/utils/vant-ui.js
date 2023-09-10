@@ -1,7 +1,10 @@
 // vant工具
 import Vue from 'vue'
-import { Checkbox, Button, Switch, Rate, Tabbar, TabbarItem, NavBar, Form, Field, Toast, Icon, Swipe, SwipeItem, Lazyload, Search, Grid, GridItem, DropdownMenu, DropdownItem, Sidebar, SidebarItem, SubmitBar, GoodsAction, GoodsActionIcon, GoodsActionButton, ActionSheet, Stepper, Dialog, RadioGroup, Radio, Tab, Tabs, Pagination } from 'vant'
+import { Checkbox, Button, Switch, Rate, Tabbar, TabbarItem, NavBar, Form, Field, Toast, Icon, Swipe, SwipeItem, Lazyload, Search, Grid, GridItem, DropdownMenu, DropdownItem, Sidebar, SidebarItem, SubmitBar, GoodsAction, GoodsActionIcon, GoodsActionButton, ActionSheet, Stepper, Dialog, RadioGroup, Radio, Tab, Tabs, Pagination, AddressList, AddressEdit, Area } from 'vant'
 
+Vue.use(Area)
+Vue.use(AddressEdit)
+Vue.use(AddressList)
 Vue.use(Pagination)
 Vue.use(Tab)
 Vue.use(Tabs)

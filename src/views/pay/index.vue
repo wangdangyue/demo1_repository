@@ -2,7 +2,7 @@
   <div class="pay">
     <van-nav-bar title="订单结算台" left-arrow @click-left="$router.go(-1)" />
     <div class="pay_detail">
-      <div class="adders">
+      <div class="adders" @click="$router.push('/address')">
         <div class="car_icon"><van-icon size="25px" name="location-o" /></div>
         <div class="center" v-if="address.name">
           <div class="name">
@@ -119,7 +119,8 @@ export default {
       const {
         data: { list }
       } = await getAddersList()
-      this.addersDetail = list[1]
+      this.addersDetail = list
+      console.log(this.addersDetail)
     },
     mode () {
       return this.$route.query.mode

@@ -14,7 +14,11 @@ export default {
       setInfo(obj)
     }
   },
-  actions: {},
+  actions: {
+    logout (content) {
+      content.commit('setUserInfo', { token: '' })
+    }
+  },
   getters: {}
 
 }

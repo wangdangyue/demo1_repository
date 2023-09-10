@@ -18,16 +18,16 @@
 </van-search >
 </form>
     <!-- 轮播图 -->
-    <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-  <van-swipe-item><img src="@/assets/banner1.webp" alt=""> </van-swipe-item>
-  <van-swipe-item><img src="@/assets/banner2.webp" alt=""> </van-swipe-item>
-  <van-swipe-item><img src="@/assets/banner3.webp" alt=""> </van-swipe-item>
+    <van-swipe class="my-swipe" :autoplay="1000" indicator-color="white">
+  <van-swipe-item @click="$router.push('/searchlist?search=餐')"><img src="@/assets/banner1.webp" alt=""> </van-swipe-item>
+  <van-swipe-item @click="$router.push('/searchlist?search=美')"><img src="@/assets/banner2.webp" alt=""> </van-swipe-item>
+  <van-swipe-item @click="$router.push('/searchlist?search=茶')"><img src="@/assets/banner3.webp" alt=""> </van-swipe-item>
 </van-swipe>
 
 <!-- 导航格子 -->
 <div class="grid">
   <ul>
-    <li  v-for="(item) in navBar"  :key="item.id">
+    <li  @click="$router.push('/category')" v-for="(item) in navBar"  :key="item.id">
     <img :src="item.imgUrl" alt=""><br>
     <span>{{item.text}}</span>
     </li>

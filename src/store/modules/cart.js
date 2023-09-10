@@ -61,6 +61,9 @@ export default {
       if (res.status === 200) {
         context.commit('delateCartId', cartIds)
       }
+    },
+    logout (context) {
+      context.commit('setCartList', {})
     }
 
   },

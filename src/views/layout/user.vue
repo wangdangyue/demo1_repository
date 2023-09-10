@@ -67,7 +67,7 @@
     <div class="service">
       <div class="title">我的服务</div>
       <div class="content">
-        <div class="content-item">
+        <div class="content-item" @click="$router.push('/address')">
           <van-icon name="records" />
           <span>收货地址</span>
         </div>
@@ -131,6 +131,7 @@ export default {
       }).then(() => {
         // 退出是一个动作 => 包含了两步，分别是将 user 和 cart 进行重置
         this.$store.dispatch('user/logout')
+        this.$store.dispatch('cart/logout')
       }).catch(() => {})
     }
   }
