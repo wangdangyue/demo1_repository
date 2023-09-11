@@ -21,7 +21,6 @@ instance.interceptors.request.use(function (config) {
     loadingType: 'spinner',
     duration: 0
   })
-
   const token = store.getters.token
   if (token) {
     config.headers['Access-Token'] = token

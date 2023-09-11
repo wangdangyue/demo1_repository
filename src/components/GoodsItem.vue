@@ -49,7 +49,7 @@ export default {
     justify-content: space-around;
     .name {
       height: 40px;
-      font-size: 18px;
+      font-size: 14px;
       font-family: 'SimHei';
     }
     // text-align: right;

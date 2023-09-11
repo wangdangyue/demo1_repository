@@ -293,7 +293,7 @@ export default {
   .name {
     margin-top: 10px;
     height: 45px;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "SimHei";
   }
   .row3 {
